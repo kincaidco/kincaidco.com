@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kincaid Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:          #1E2122;
+    --ink:         #DDD9CE;
+    --ink-mid:     #87847F;
+    --ink-faint:   #494A4B;
+    --accent:      #4A7C59;
+    --rule:        #494A4B;
+    --signal-rule: #4A7C59;
+  }
+
+  html, body {
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 2.5rem;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 660px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5rem 0 3rem;
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 2.25rem;
+  }
+
+  .headline {
+    font-size: clamp(2.75rem, 7.5vw, 5.25rem);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .headline em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .rule {
+    width: 40px;
+    height: 1px;
+    background: var(--rule);
+    margin-bottom: 2rem;
+  }
+
+  .body-copy {
+    font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+    font-weight: 300;
+    line-height: 1.72;
+    color: var(--ink);
+    max-width: 500px;
+    margin-bottom: 1.75rem;
+  }
+
+  .body-copy em {
+    font-style: italic;
+  }
+
+  .secondary-signal {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.72;
+    color: var(--ink-mid);
+    max-width: 500px;
+    margin-bottom: 3rem;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--signal-rule);
+  }
+
+  .cta-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--ink);
+    text-decoration: none;
+    padding: 13px 26px;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .cta-primary:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .cta-secondary {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .cta-secondary:hover {
+    color: var(--ink);
+    border-color: var(--ink-mid);
+  }
+
+  footer {
+    max-width: 660px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-mark {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .footer-contact {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 0.10em;
+    color: var(--ink-mid);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .footer-contact:hover {
+    color: var(--ink);
+    border-color: var(--ink-mid);
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <p class="eyebrow">Kincaid Co. &nbsp;&mdash;&nbsp; Coming soon</p>
+
+  <h1 class="headline">
+    Leaders and<br>builders who<br>are done with<br><em>surface answers.</em>
+  </h1>
+
+  <div class="rule"></div>
+
+  <p class="body-copy">
+    There is a deeper explanation for why leading and building feels harder than it should.
+    My work restores access to the intelligence — <em>biological, relational, and human</em> —
+    that modern conditions suppress.
+  </p>
+
+  <p class="secondary-signal">
+    For founders and early-stage companies: when all available energy is rerouting to survival,
+    growth is not a strategy problem. It is a systemic load problem. I work at that level.
+  </p>
+
+  <div class="cta-group">
+    <a class="cta-primary" href="https://www.linkedin.com/in/patrickkincaid" target="_blank" rel="noopener">Follow on LinkedIn</a>
+    <a class="cta-secondary" href="mailto:hello@kincaidco.com">Get in touch</a>
+  </div>
+</main>
+
+<footer>
+  <span class="footer-mark">&copy; 2026 Kincaid Co.</span>
+  <a class="footer-contact" href="mailto:hello@kincaidco.com">hello@kincaidco.com</a>
+</footer>
+
+</body>
+</html>
